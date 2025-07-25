@@ -48,9 +48,14 @@
         <!-- List Todo -->
          <section>
                 <div class="action-container pt-[16px] pb-[16px]">
-                <button class="px-[26px] py-[4px] rounded-[8px] bg-gray-500 text-white">Filter</button>
-                <button type="button" class="px-[26px] py-[4px] rounded-[8px] bg-red-500 text-white"
-                    onclick="removeAllTask();">Delete All</button>
+                    <select id="filter-select" class="px-[10px] py-[4px] rounded-[8px] bg-gray-300 border-gray-300" onchange="toggleFilter();">
+                        <option value="" disabled hidden selected>Filter</option>
+                        <option value="all">All</option>
+                        <option value="completed">Completed</option>
+                        <option value="uncompleted">Uncompleted</option>
+                    </select>
+                    <button type="button" class="px-[26px] py-[4px] rounded-[8px] bg-red-500 text-white"
+                        onclick="removeAllTask();">Delete All</button>
                 </div>
 
                     <header>
@@ -60,6 +65,7 @@
             <div id="todo-list">
                 <p>No tasks available</p>
             </div>
+            
          </section>
     </main>
     <!-- JavaScript External -->
